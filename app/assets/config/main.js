@@ -9,7 +9,6 @@ const player2 = 'player2';
 const draw = 'draw';
 var counter;
 
-
 // set keys and start countdown timer; calls display keys to display keys when
 // timer hits 0
 function countdownTimer(){
@@ -17,7 +16,7 @@ function countdownTimer(){
   var i = 3;
   counter = setInterval(
     function(){
-      console.log(i);
+      setTimerValue(i);
       i = i - 1;
       if(i < 0){
         clearCounter();
@@ -26,6 +25,10 @@ function countdownTimer(){
     }, 1000
 
   )
+}
+
+function setTimerValue(value){
+  $("#countdown-timer-value").text(value);
 }
 
 function clearCounter(){
