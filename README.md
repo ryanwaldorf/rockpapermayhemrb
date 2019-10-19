@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+--------------------
+
+Mappings to https://github.com/derekpankaew/rockpapermayhem
+
+`app/views/game/index.html.erb` - `docs/game.htm` 
+
+`app/assets/config/main.js` - `docs/main.js`
