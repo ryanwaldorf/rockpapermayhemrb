@@ -1,0 +1,84 @@
+<%= javascript_include_tag "main.js" %>
+<div class='container mt-4'>
+  <!-- <div id='big-countdown-timer'>
+    <div style='z-index: 3' id='countdown-timer'>
+      <div class='text-center' style='color: white;'>
+
+      </div>
+    </div>
+    <div id='countdown-text'>
+      <h1 class='mt-5 countdown' style='z-index: 4; font-size: 8em;'><strong>Countdown: <span id='countdown-timer'></span></strong>
+      </h1>
+    </div>
+  </div> -->
+  <h1>Rock Paper Mayhem: Round <span id='round'>1</span></h1>
+  <!-- <h1 class='mt-5 countdown' style='z-index: 4; font-size: 8em;'><strong>Countdown: <span id='countdown-timer'></span></strong> -->
+  <!-- </h1> -->
+  <h1 class='countdown' style='font-size: 3em;'><strong>Countdown: <span id='countdown-timer'></span></strong></h1>
+
+  <div class='row'>
+    <div class='col-6'>
+      <h3>Player 1: <span id='p1-points'></span></h3>
+      <hr>
+      <div class='border'>
+        <div class='py-5'>
+          <div class='text-center'>
+            <img class='w-75' src='https://media.giphy.com/media/9PgvV8ale90lQwfQTZ/giphy.gif'>
+          </img>
+        </div>
+        </div>
+
+      </div>
+      <div class='border rounded-corners pl-4'>
+        <div id='p1-rock'><i class="fas fa-hand-rock fa-3x"></i>: <span id='p1-rock-keys'>?</span></div>
+        <div id='p1-paper'><i class="fas fa-hand-paper fa-3x"></i>: <span id='p1-paper-keys'>?</span></div>
+        <div id='p1-scissor'><i class="fas fa-hand-scissors fa-3x"></i>: <span id='p1-scissors-keys'>?</span></div>
+      </div>
+    </div>
+    <div class='col-6'>
+      <h3>Player 2: <span id='p2-points'></span></h3>
+      <hr>
+      <div class='border'>
+        <div class='py-5'>
+          <div class='text-center'><img class='w-75' src='https://i.makeagif.com/media/1-03-2018/KBQ4c1.gif'></img></div>
+
+        </div>
+      </div>
+      <div class='border rounded-corners pl-4'>
+        <div id='p2-rock'><i class="fas fa-hand-rock fa-3x"></i>: <span id='p2-rock-keys'>?</span></div>
+        <div id='p2-paper'><i class="fas fa-hand-paper fa-3x"></i>: <span id='p2-paper-keys'>?</span></div>
+        <div id='p2-scissors'><i class="fas fa-hand-scissors fa-3x"></i>: <span id='p2-scissors-keys'>?</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function(){
+    countdownTimerQuickAndDirty();
+    countdownTimer();
+  }
+</script>
+<!-- <script>
+  Skip to content
+  Search or jump to…
+
+  Pull requests
+  Issues
+  Marketplace
+  Explore -->
+
+  <!-- // @ryanwaldorf
+  // 3
+  // 00derekpankaew/rockpapermayhem
+  //  Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights
+  // rockpapermayhem/docs/main.js /
+  // @clach04 clach04 🍰 initial version
+  // 35146be 2 minutes ago
+  // 183 lines (144 sloc)  5.18 KB
+  //
+  // Jump to definition is available!Beta
+  // Navigate your code with ease. In select public repositories, you can now click on function and method calls to jump to their definitions in the same repository. Learn more
+  //
+  //  You're using jump to definition to discover and navigate code.  Beta
+  // Learn more or give us feedback -->
