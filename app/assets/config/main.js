@@ -9,10 +9,15 @@ const draw = 'draw';
 var counter;
 var gameOn = false;
 var globalPlayerData;
+var player1Score = 0;
+var round = 1;
+
+// var winnerName = ''
 
 // set keys and start countdown timer; calls display keys to display keys when
 // timer hits 0
 function countdownTimer(){
+  $("#countdownModal").modal("toggle")
   globalPlayerData = generate_keys(1);
   var i = 3;
   counter = setInterval(
@@ -21,6 +26,7 @@ function countdownTimer(){
       i = i - 1;
       if(i < 0){
         clearCounter();
+        $("#countdownModal").modal("toggle")
         displayKeys(globalPlayerData);
         gameOn = true;
       }
@@ -262,12 +268,17 @@ document.onkeydown = function (evt) {
   }
 };
 
+function setWinnerText(whoWon){
+  $("#winner-name").text(whoWon);
+  $("#winnerModal").modal("toggle")
+}
+
 function checkWinner(){
   // console.log('winner checked')
   console.log(globalPlayerData)
     if (globalPlayerData["player1"]["result"] != null && globalPlayerData["player2"]["result"] != null) {
           whoWon = winner(globalPlayerData["player1"]["result"], globalPlayerData["player2"]["result"])
-          console.log("Winner: " + whoWon)
+          setWinnerText(whoWon)
     }
 }
 
